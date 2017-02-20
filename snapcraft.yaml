@@ -1,4 +1,4 @@
-name: whois
+name: whois-snap
 version: '0.1'
 summary: whois snap
 description: |
@@ -14,9 +14,10 @@ parts:
   env:
     plugin: dump
     organize:
-      audacity.wrapper: usr/bin/whois
+      whois.wrapper: usr/bin/whois
 
 apps:
-  audacity:
+  whois-snap:
     command: whois
+    plugs: [network]
     
