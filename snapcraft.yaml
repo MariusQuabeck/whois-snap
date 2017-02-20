@@ -1,0 +1,22 @@
+name: whois
+version: '0.1'
+summary: whois snap
+description: |
+    whois snap
+grade: stable
+confinement: strict
+
+parts:
+  archives:
+    plugin: nil
+    stage-packages:
+      - whois
+  env:
+    plugin: dump
+    organize:
+      audacity.wrapper: usr/bin/whois
+
+apps:
+  audacity:
+    command: whois
+    
